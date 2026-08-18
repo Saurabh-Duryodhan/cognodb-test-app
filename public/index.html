@@ -25,7 +25,7 @@
           <span id="dbStatusText">CognoDB Online</span>
         </div>
         <button id="addMovieBtn" class="btn btn-sm btn-primary">
-          + Add Title
+          + Add Movie
         </button>
       </div>
     </div>
@@ -44,7 +44,7 @@
       </p>
       <div class="hero-actions-row">
         <a href="#catalogTab" class="btn btn-primary" onclick="switchTab('catalogTab')">
-          Explore Catalog
+          Explore Movies
         </a>
         <button class="btn" onclick="switchTab('graphTab')">
           🕸️ Launch Graph Explorer
@@ -61,7 +61,7 @@
         <div class="metric-icon-wrap cyan">🎬</div>
         <div class="metric-details">
           <span id="metricMovies" class="metric-value">--</span>
-          <span class="metric-label">Studio Catalog Titles</span>
+          <span class="metric-label">Movies in Catalog</span>
         </div>
       </div>
       <div class="metric-card">
@@ -91,7 +91,7 @@
     <div class="tabs-nav-container">
       <nav class="tabs-nav">
         <button class="tab-btn active" data-tab="catalogTab">
-          <span>🎬</span> Titles Catalog (CRUD)
+          <span>🎬</span> Movies Catalog (CRUD)
         </button>
         <button class="tab-btn" data-tab="graphTab">
           <span>🕸️</span> Interactive Visualizer
@@ -113,7 +113,7 @@
       <div class="toolbar">
         <div class="search-box">
           <span class="search-icon">🔍</span>
-          <input type="text" id="movieSearchInput" class="search-input" placeholder="Search titles, actors, directors, taglines..." />
+          <input type="text" id="movieSearchInput" class="search-input" placeholder="Search movies, actors, directors, taglines..." />
         </div>
         <div class="filter-group">
           <select id="genreFilter" class="custom-select">
@@ -267,14 +267,14 @@ LIMIT 5</textarea>
   <div id="movieModal" class="modal-overlay">
     <div class="modal-card">
       <div class="modal-header">
-        <h2 id="movieModalTitle" class="modal-title">Add New Studio Title</h2>
+        <h2 id="movieModalTitle" class="modal-title">Add New Movie</h2>
         <button class="modal-close-btn">&times;</button>
       </div>
       <form id="movieForm">
         <input type="hidden" id="movieFormOldTitle" />
         
         <div class="form-group">
-          <label class="form-label">Title Name *</label>
+          <label class="form-label">Movie Title *</label>
           <input type="text" id="movieFormTitle" class="form-input" required placeholder="e.g. Inception" />
         </div>
 
@@ -327,7 +327,7 @@ LIMIT 5</textarea>
 
         <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.75rem;">
           <button type="button" class="btn modal-cancel-btn">Cancel</button>
-          <button type="submit" class="btn btn-primary">Save Title to CognoDB</button>
+          <button type="submit" class="btn btn-primary">Save Movie to CognoDB</button>
         </div>
       </form>
     </div>
@@ -417,7 +417,7 @@ LIMIT 5</textarea>
   <div id="deleteConfirmModal" class="modal-overlay">
     <div class="modal-card" style="max-width: 440px;">
       <div class="modal-header">
-        <h2 class="modal-title" style="color: var(--apple-red);">⚠️ Detach & Delete Title</h2>
+        <h2 class="modal-title" style="color: var(--apple-red);">⚠️ Detach & Delete Movie</h2>
         <button class="modal-close-btn">&times;</button>
       </div>
       <p style="font-size: 0.9rem; color: var(--label-secondary); margin-bottom: 1.35rem;">
@@ -425,7 +425,7 @@ LIMIT 5</textarea>
       </p>
       <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
         <button type="button" class="btn modal-cancel-btn">Cancel</button>
-        <button type="button" id="confirmDeleteBtn" class="btn btn-danger">Delete Title</button>
+        <button type="button" id="confirmDeleteBtn" class="btn btn-danger">Delete Movie</button>
       </div>
     </div>
   </div>
