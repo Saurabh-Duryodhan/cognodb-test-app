@@ -1,0 +1,20 @@
+{
+  "name": "omniflix-enterprise",
+  "version": "1.0.0",
+  "description": "OmniFlix Enterprise — Studio Knowledge & Graph Intelligence Platform backed by CognoDB Cloud (openCypher/Bolt 5.x).",
+  "license": "MIT",
+  "author": "Saurabh R. Duryodhan",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node src/scripts/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "neo4j-driver": "^5.28.1"
+  }
+}
