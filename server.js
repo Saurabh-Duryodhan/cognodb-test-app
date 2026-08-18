@@ -80,4 +80,9 @@ function startServer(port) {
   process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 }
 
-startServer(DEFAULT_PORT);
+// Only start the HTTP listener if not running in Vercel serverless environment
+if (!process.env.VERCEL) {
+  startServer(DEFAULT_PORT);
+}
+
+export default app;
