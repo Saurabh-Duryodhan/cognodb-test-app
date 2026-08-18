@@ -134,7 +134,7 @@ async function loadMovies() {
           <img class="movie-poster" src="${m.poster || 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500&auto=format&fit=crop&q=80'}" alt="${m.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500&auto=format&fit=crop&q=80'" />
           <div class="movie-rating-badge">
             <span>★</span>
-            <span>${m.imdbRating || 'N/A'}</span>
+            <span>${m.imdbRating || '—'}</span>
           </div>
         </div>
         <div class="movie-content">
@@ -206,7 +206,7 @@ async function openMovieDetails(title) {
     document.getElementById('detailModalPoster').src = m.poster || 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500&auto=format&fit=crop&q=80';
     document.getElementById('detailModalTagline').textContent = m.tagline ? `"${m.tagline}"` : '';
     document.getElementById('detailModalOverview').textContent = m.overview || 'No synopsis provided.';
-    document.getElementById('detailModalRating').textContent = `IMDb: ${m.imdbRating || 'N/A'} ★`;
+    document.getElementById('detailModalRating').textContent = m.imdbRating ? `IMDb: ${m.imdbRating} ★` : 'Unrated';
     document.getElementById('detailModalDuration').textContent = m.duration ? `${m.duration} mins` : '';
     
     // Genres
