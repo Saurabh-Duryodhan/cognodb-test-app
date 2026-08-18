@@ -1,7 +1,7 @@
 {
-  "name": "omniflix-enterprise",
+  "name": "omniflix-graph-app",
   "version": "1.0.0",
-  "description": "OmniFlix Enterprise — Studio Knowledge & Graph Intelligence Platform backed by CognoDB Cloud (openCypher/Bolt 5.x).",
+  "description": "Graph database movie app powered by CognoDB (openCypher/Bolt) with full CRUD, visual graph explorer, and multi-hop traversals.",
   "license": "MIT",
   "author": "Saurabh R. Duryodhan",
   "type": "module",
